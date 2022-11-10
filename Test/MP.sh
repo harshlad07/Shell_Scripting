@@ -15,12 +15,10 @@ read -p "Please choose your option : " x
 
 if [ $x -eq 1 ];
 then
-
-
-	$(sh SU.sh)
+	./SU.sh
 elif [ $x -eq 2 ];
 then
-	echo "$(sh SI.sh)"
+	./SI.sh
 else
 	echo "Exiting...."
 fi

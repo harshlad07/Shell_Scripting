@@ -14,23 +14,26 @@ read -sp "Password - " ps
 U='uname.txt'
 P='pass.txt'
 n=1
-while read line;
-do
-	if [ n == line ];
+echo ""
+
+
+grep -q -inr "$un"
+echo "$?"
+if [ $? -eq 0 ]
+then
+	grep -q -inr "$ps"
+	if [ $? -eq 0 ]
 	then
-		while read line2;
-		do
-			if [ n == line2 ]
-			then
-				echo ""
-			else
-				echo "Password wrong!!"
-			fi
-		done
+		echo "Moving to Test page...."
+		./TP.sh
+		break
 	else
-		echo "Incorrect username!!"
+		echo "Password wrong!!"
+		echo ""
+		read "Re-enter your password - " rp
+
 	fi
-done
-
-
+else
+	echo "Incorrect username!!"
+fi
 

@@ -26,7 +26,6 @@ then
 	then
 		echo "Moving to Test page...."
 		./TP.sh
-		break
 	else
 		echo "Password wrong!!"
 		echo ""

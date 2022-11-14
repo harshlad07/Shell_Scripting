@@ -10,17 +10,17 @@ echo "3. Exit"
 
 read -p "Please choose your option - " o
 
-if [ o -eq 1 ];
+if [ $o -eq 1 ];
 then
 	echo "Moving to test page...."
 	sleep 2
-	./TT.sh
-elif [ o -eq 2 ]
+	./tt1.sh
+elif [ $o -eq 2 ]
 then
 	echo "Viewing your test...."
 	sleep 2
-	./VT.sh
-elif [ o -eq 3 ]
+	./tr.sh
+elif [ $o -eq 3 ]
 then
 	echo "Exiting Test page...."
 	sleep 2
